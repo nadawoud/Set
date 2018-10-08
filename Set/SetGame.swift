@@ -82,10 +82,21 @@ class SetGame {
                     boardCards = boardCards.filter {$0 != card}
                 }
                 
+                drawThreeMoreCards()
+                
                 //remove ids from selectedCardIDS
                 selectedCards = [Card]()
             }
         }
+    }
+    
+    func drawThreeMoreCards() {
+        for i in 0...2 {
+            boardCards += [cardDeck[i]]
+        }
+        
+        //Remove from cardDeck
+        cardDeck.removeSubrange(ClosedRange(uncheckedBounds: (lower: 0, upper: 2)))
     }
     
     func doMakeASet(firstCard: Card, secondCard: Card, thirdCard: Card) -> Bool {
