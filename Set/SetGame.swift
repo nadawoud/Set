@@ -44,9 +44,13 @@ class SetGame {
             cardDeck[index].cardID = index
         }
         
+        //Add 12 cards to boardCards
         for i in 0...11 {
             boardCards += [cardDeck[i]]
         }
+        
+        //Remove boardCards from cardDeck
+        cardDeck.removeSubrange(ClosedRange(uncheckedBounds: (lower: 0, upper: 11)))
     }
     
     // TODO: Add func to shuffle the cards
