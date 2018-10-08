@@ -83,10 +83,9 @@ class SetGame {
                 }
                 
                 drawThreeMoreCards()
-                
-                //remove ids from selectedCardIDS
-                selectedCards = [Card]()
             }
+            //remove ids from selectedCards
+            selectedCards = [Card]()
         }
     }
     
