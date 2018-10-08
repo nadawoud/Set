@@ -273,7 +273,6 @@
                                 <rect key="frame" x="94" y="517" width="187" height="35"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.52156862749999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="EQy-43-lEC"/>
                                     <constraint firstAttribute="height" constant="35" id="EQy-43-lEC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -320,6 +319,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="foundSetsLabel" destination="QQc-tt-wvh" id="HYA-xs-h4C"/>
+                        <outlet property="messageLabel" destination="IcS-Ud-vGf" id="oPL-CU-HiZ"/>
+                        <outlet property="scoreLabel" destination="rQi-yF-XNt" id="WQ3-YG-4Rm"/>
+                        <outlet property="timeLabel" destination="mOA-KL-aBe" id="l2M-mC-5T1"/>
                         <outletCollection property="cardButtons" destination="aih-WR-FCa" collectionClass="NSMutableArray" id="0Vh-e6-z88"/>
                         <outletCollection property="cardButtons" destination="y66-GH-7ME" collectionClass="NSMutableArray" id="O4d-3u-l1t"/>
                         <outletCollection property="cardButtons" destination="oFA-uV-Wrr" collectionClass="NSMutableArray" id="zPL-Yf-rOB"/>

@@ -14,6 +14,14 @@ class SetViewController: UIViewController {
     
     @IBOutlet var cardButtons: [UIButton]!
     
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var foundSetsLabel: UILabel!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
     let colors = [UIColor.init(red: (219 / 255), green: (50 / 255), blue: (54 / 255), alpha: 1), //red
         UIColor.init(red: (244 / 255), green: (194 / 255), blue: (13 / 255), alpha: 1),//yellow
         UIColor.init(red: (60 / 255), green: (186 / 255), blue: (84 / 255), alpha: 1)] //green
