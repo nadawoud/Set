@@ -184,6 +184,9 @@ class SetViewController: UIViewController {
     @IBAction func touchDeal3MoreCards(_ sender: UIButton) {
     }
     
+    @IBAction func touchRevealASet(_ sender: UIButton) {
+    }
+    
     @IBAction func touchNewGame(_ sender: UIButton) {
         set.reset()
         startNewGame()

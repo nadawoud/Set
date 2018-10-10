@@ -269,23 +269,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR4-xD-UHt">
-                                <rect key="frame" x="94" y="517" width="187" height="35"/>
-                                <color key="backgroundColor" red="0.25882352939999997" green="0.52156862749999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="EQy-43-lEC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title=" Deal 3 More Cards ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchDeal3MoreCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLN-lQ-65e"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rr2-4i-jae">
-                                <rect key="frame" x="130" y="572" width="115" height="35"/>
+                                <rect key="frame" x="130" y="581" width="115" height="35"/>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Enz-nD-RBi"/>
@@ -299,18 +284,47 @@
                                     <action selector="touchNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4g-Z1-qzc"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xza-86-snG" userLabel="Buttons Stack View">
+                                <rect key="frame" x="39.5" y="517" width="296" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR4-xD-UHt">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="39"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52156862749999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title=" Deal 3 Cards ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchDeal3MoreCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLN-lQ-65e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5L-Ef-IWK">
+                                        <rect key="frame" x="163" y="0.0" width="133" height="39"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52156862749999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Reveal a Set">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchRevealASet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMJ-LO-84m"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.94115844286243655" green="0.94115844286243655" blue="0.94115844286243655" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="WJb-vP-NtG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4YF-ND-9uD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJb-vP-NtG" secondAttribute="trailing" constant="16" id="6Io-Se-nd6"/>
-                            <constraint firstItem="Rr2-4i-jae" firstAttribute="top" secondItem="WR4-xD-UHt" secondAttribute="bottom" constant="20" id="C97-3Z-fws"/>
+                            <constraint firstItem="xza-86-snG" firstAttribute="top" secondItem="WZf-zm-Sq1" secondAttribute="bottom" constant="25" id="Bis-Il-RUo"/>
                             <constraint firstItem="IcS-Ud-vGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KHO-aj-mEn"/>
-                            <constraint firstItem="WR4-xD-UHt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LIT-bP-HP2"/>
-                            <constraint firstItem="WR4-xD-UHt" firstAttribute="top" secondItem="WZf-zm-Sq1" secondAttribute="bottom" constant="25" id="Lg9-pX-xJH"/>
                             <constraint firstItem="Rr2-4i-jae" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O7N-iY-gSL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WZf-zm-Sq1" secondAttribute="trailing" constant="16" id="Xri-3M-05Z"/>
                             <constraint firstItem="WJb-vP-NtG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eL3-bc-3Ni"/>
+                            <constraint firstItem="Rr2-4i-jae" firstAttribute="top" secondItem="xza-86-snG" secondAttribute="bottom" constant="25" id="kIH-EW-clB"/>
+                            <constraint firstItem="xza-86-snG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="m5y-Je-Xon"/>
                             <constraint firstItem="WZf-zm-Sq1" firstAttribute="top" secondItem="IcS-Ud-vGf" secondAttribute="bottom" constant="25" id="qan-WT-Nee"/>
                             <constraint firstItem="IcS-Ud-vGf" firstAttribute="top" secondItem="WJb-vP-NtG" secondAttribute="bottom" constant="25" id="r3z-ab-pWR"/>
                             <constraint firstItem="WZf-zm-Sq1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sCh-OJ-cFo"/>
