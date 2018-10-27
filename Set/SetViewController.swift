@@ -182,6 +182,8 @@ class SetViewController: UIViewController {
     }
     
     @IBAction func touchDeal3MoreCards(_ sender: UIButton) {
+        set.drawThreeMoreCards()
+        updateView()
     }
     
     @IBAction func touchRevealASet(_ sender: UIButton) {
