@@ -170,6 +170,8 @@ class SetViewController: UIViewController {
         //Remove matched cards
         disableAllButtons()
         displayBoardCards()
+        
+        scoreLabel.text = "Score: \(set.score)"
     }
     
     func selectCard(button: UIButton) {

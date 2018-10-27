@@ -77,12 +77,13 @@ class SetGame {
         if selectedCards.count == 3 {
             if doMakeASet(firstCard: selectedCards[0], secondCard: selectedCards[1], thirdCard: selectedCards[2]) {
                 matchedCards += selectedCards
-                //remove from floor cards
+                //remove from board cards
                 for card in selectedCards{
                     boardCards = boardCards.filter {$0 != card}
                 }
                 
                 drawThreeMoreCards()
+                score += 3
             }
             //remove ids from selectedCards
             selectedCards = [Card]()
