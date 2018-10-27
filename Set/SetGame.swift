@@ -13,6 +13,7 @@ class SetGame {
     var cardDeck = [Card]()
     
     private(set) var score = 0
+    private(set) var foundSets = 0
     
     private let symbols = [Symbol.firstSymbol, Symbol.secondSymbol, Symbol.thirdSymbol]
     
@@ -84,6 +85,7 @@ class SetGame {
                 
                 drawThreeMoreCards()
                 score += 3
+                foundSets += 1
             }
             //remove ids from selectedCards
             selectedCards = [Card]()

@@ -172,6 +172,7 @@ class SetViewController: UIViewController {
         displayBoardCards()
         
         scoreLabel.text = "Score: \(set.score)"
+        foundSetsLabel.text = "Found Sets: \(set.foundSets)"
     }
     
     func selectCard(button: UIButton) {
