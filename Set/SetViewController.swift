@@ -173,6 +173,13 @@ class SetViewController: UIViewController {
         
         scoreLabel.text = "Score: \(set.score)"
         foundSetsLabel.text = "Found Sets: \(set.foundSets)"
+        messageLabel.text = set.message
+        if set.messageStatus {
+            messageLabel.textColor =  #colorLiteral(red: 0.4105491042, green: 0.7259821892, blue: 0.2108097374, alpha: 1)
+        }
+        else if !set.messageStatus {
+            messageLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        }
     }
     
     func selectCard(button: UIButton) {

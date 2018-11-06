@@ -14,6 +14,8 @@ class SetGame {
     
     private(set) var score = 0
     private(set) var foundSets = 0
+    private(set) var message = " "
+    private(set) var messageStatus = false
     
     private let symbols = [Symbol.firstSymbol, Symbol.secondSymbol, Symbol.thirdSymbol]
     
@@ -86,7 +88,14 @@ class SetGame {
                 drawThreeMoreCards()
                 score += 3
                 foundSets += 1
+                message = "Great! You found a set"
+                messageStatus = true
             }
+            else {
+                message = "Not a set. Try again."
+                messageStatus = false
+            }
+            
             //remove ids from selectedCards
             selectedCards = [Card]()
         }
