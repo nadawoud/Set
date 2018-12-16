@@ -22,9 +22,11 @@ class SetViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     
-    let colors = [UIColor.init(red: (219 / 255), green: (50 / 255), blue: (54 / 255), alpha: 1), //red
-        UIColor.init(red: (244 / 255), green: (194 / 255), blue: (13 / 255), alpha: 1),//yellow
-        UIColor.init(red: (60 / 255), green: (186 / 255), blue: (84 / 255), alpha: 1)] //green
+    let red = UIColor.init(red: (219 / 255), green: (50 / 255), blue: (54 / 255), alpha: 1)
+    let yellow = UIColor.init(red: (244 / 255), green: (194 / 255), blue: (13 / 255), alpha: 1)
+    let green = UIColor.init(red: (60 / 255), green: (186 / 255), blue: (84 / 255), alpha: 1)
+    
+    lazy var colors = [red, yellow, green]
     
     let symbols = ["▲", "■", "●"]
     
@@ -147,7 +149,7 @@ class SetViewController: UIViewController {
         }
     }
     
-    let selectionColor = UIColor.init(red: (72 / 255), green: (133 / 255), blue: (237 / 255), alpha: 1).cgColor
+    let blue = UIColor.init(red: (72 / 255), green: (133 / 255), blue: (237 / 255), alpha: 1).cgColor
     
     func disableAllButtons() {
         for button in cardButtons {
@@ -175,16 +177,16 @@ class SetViewController: UIViewController {
         foundSetsLabel.text = "Found Sets: \(set.foundSets)"
         messageLabel.text = set.message
         if set.messageStatus {
-            messageLabel.textColor =  #colorLiteral(red: 0.4105491042, green: 0.7259821892, blue: 0.2108097374, alpha: 1)
+            messageLabel.textColor = green
         }
         else if !set.messageStatus {
-            messageLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            messageLabel.textColor = red
         }
     }
     
     func selectCard(button: UIButton) {
         button.layer.borderWidth = 3.0
-        button.layer.borderColor = selectionColor
+        button.layer.borderColor = blue
     }
     
     func deselectCard(button: UIButton) {
