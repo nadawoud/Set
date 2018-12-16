@@ -131,9 +131,7 @@ class SetGame {
         //Make sure that numbers are all the same or all different
         let setNumber = (firstCard.numberOfSymbols == secondCard.numberOfSymbols) && (secondCard.numberOfSymbols == thirdCard.numberOfSymbols) ||
             ((firstCard.numberOfSymbols != secondCard.numberOfSymbols) && (secondCard.numberOfSymbols != thirdCard.numberOfSymbols) && (firstCard.numberOfSymbols != thirdCard.numberOfSymbols))
-        
-        print(setColor && setSymbol && setShading && setNumber)
-        
+            
         return setColor && setSymbol && setShading && setNumber
     }
     
