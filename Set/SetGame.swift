@@ -107,12 +107,13 @@ class SetGame {
     }
     
     func drawThreeMoreCards() {
-        for i in 0...2 {
-            boardCards += [cardDeck[i]]
+        if cardDeck.count >= 3{
+            for i in 0...2 {
+                boardCards += [cardDeck[i]]
+            }
+            //Remove from cardDeck
+            cardDeck.removeSubrange(ClosedRange(uncheckedBounds: (lower: 0, upper: 2)))
         }
-        
-        //Remove from cardDeck
-        cardDeck.removeSubrange(ClosedRange(uncheckedBounds: (lower: 0, upper: 2)))
     }
     
     func doMakeASet(firstCard: Card, secondCard: Card, thirdCard: Card) -> Bool {
