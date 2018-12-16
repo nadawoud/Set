@@ -17,6 +17,9 @@ class SetGame {
     private(set) var message = " "
     private(set) var messageStatus = false
     
+    private let successMessages = ["Great! 👍", "Keep on going 👏", "One set found ✅", "That's right 🙌", "Cool 😎"]
+    private let failureMessages = ["Not a set 👎", "Try again 🤦🏻‍♀️", "Still not found 🙅🏻‍♂️", "Keep trying 🔄", "Maybe next time🤞"]
+    
     private let symbols = [Symbol.firstSymbol, Symbol.secondSymbol, Symbol.thirdSymbol]
     
     private let colors = [Color.firstColor, Color.secondColor, Color.thirdColor]
@@ -88,11 +91,13 @@ class SetGame {
                 drawThreeMoreCards()
                 score += 3
                 foundSets += 1
-                message = "Great! You found a set"
+                let randomMessageIndex = Int(arc4random_uniform(UInt32(successMessages.count)))
+                message = successMessages[randomMessageIndex]
                 messageStatus = true
             }
             else {
-                message = "Not a set. Try again."
+                let randomMessageIndex = Int(arc4random_uniform(UInt32(failureMessages.count)))
+                message = failureMessages[randomMessageIndex]
                 messageStatus = false
             }
             
