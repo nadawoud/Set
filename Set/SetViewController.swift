@@ -10,7 +10,7 @@ import UIKit
 
 class SetViewController: UIViewController {
     
-    var set = SetGame()
+    lazy var set = SetGame(maxNumberOfBoardCards: cardButtons.count)
     
     @IBOutlet var cardButtons: [UIButton]!
     

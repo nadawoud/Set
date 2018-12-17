@@ -17,6 +17,8 @@ class SetGame {
     private(set) var message = " "
     private(set) var messageStatus = false
     
+    var maxNumberOfBoardCards: Int
+    
     private let successMessages = ["Great! 👍", "Keep on going 👏", "One set found ✅", "That's right 🙌", "Cool 😎"]
     private let failureMessages = ["Not a set 👎", "Try again 🤦🏻‍♀️", "Still not found 🙅🏻‍♂️", "Keep trying 🔄", "Maybe next time🤞"]
     
@@ -32,7 +34,7 @@ class SetGame {
     var matchedCards = [Card]()
     var boardCards = [Card]()
     
-    init() {
+    init(maxNumberOfBoardCards: Int) {
         for color in colors {
             for shading in shadings {
                 for number in numbers {
@@ -43,6 +45,7 @@ class SetGame {
                 }
             }
         }
+        self.maxNumberOfBoardCards = maxNumberOfBoardCards
         cardDeck = shuffleCardDeck()
         
         //Make cardID unique
@@ -107,13 +110,14 @@ class SetGame {
     }
     
     func drawThreeMoreCards() {
-        if cardDeck.count >= 3{
+        if boardCards.count < maxNumberOfBoardCards && cardDeck.count >= 3 {
             for i in 0...2 {
                 boardCards += [cardDeck[i]]
             }
             //Remove from cardDeck
             cardDeck.removeSubrange(ClosedRange(uncheckedBounds: (lower: 0, upper: 2)))
         }
+        print(boardCards.count)
     }
     
     func doMakeASet(firstCard: Card, secondCard: Card, thirdCard: Card) -> Bool {
