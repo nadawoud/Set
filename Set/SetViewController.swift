@@ -22,6 +22,8 @@ class SetViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var deal3CardsButton: UIButton!
+    
     let red = UIColor.init(red: (219 / 255), green: (50 / 255), blue: (54 / 255), alpha: 1)
     let yellow = UIColor.init(red: (244 / 255), green: (194 / 255), blue: (13 / 255), alpha: 1)
     let green = UIColor.init(red: (60 / 255), green: (186 / 255), blue: (84 / 255), alpha: 1)
@@ -172,6 +174,10 @@ class SetViewController: UIViewController {
         //Remove matched cards
         disableAllButtons()
         displayBoardCards()
+        
+        if set.boardCards.count == cardButtons.count {
+            deal3CardsButton.isEnabled = false
+        }
         
         scoreLabel.text = "Score: \(set.score)"
         foundSetsLabel.text = "Found Sets: \(set.foundSets)"
