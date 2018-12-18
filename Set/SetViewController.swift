@@ -175,7 +175,7 @@ class SetViewController: UIViewController {
         disableAllButtons()
         displayBoardCards()
         
-        if set.boardCards.count == cardButtons.count {
+        if set.boardCards.count == cardButtons.count || set.cardDeck.count < 3 {
             deal3CardsButton.isEnabled = false
         }
         
