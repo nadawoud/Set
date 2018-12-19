@@ -210,6 +210,7 @@ class SetViewController: UIViewController {
     @IBAction func touchNewGame(_ sender: UIButton) {
         set.reset()
         startNewGame()
+        updateView()
     }
 }
 

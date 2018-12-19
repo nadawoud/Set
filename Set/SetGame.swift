@@ -164,6 +164,19 @@ class SetGame {
     // TODO: Add func to reset game
     func reset() {
         score = 0
+        foundSets = 0
+        message = " "
+        messageStatus = false
+        selectedCards = [Card]()
+        matchedCards = [Card]()
+        boardCards = [Card]()
+        //Add 12 cards to boardCards
+        for i in 0...11 {
+            boardCards += [cardDeck[i]]
+        }
+        
+        //Remove boardCards from cardDeck
+        cardDeck.removeSubrange(ClosedRange(uncheckedBounds: (lower: 0, upper: 11)))
         cardDeck = shuffleCardDeck()
     }
 }
