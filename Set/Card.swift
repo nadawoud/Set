@@ -25,7 +25,6 @@ enum NumberOfSymbols: Int {
 
 
 struct Card: Hashable {
-    var hashValue: Int { return cardID}
     
     static func ==(lhs: Card, rhs: Card) -> Bool {
         return lhs.cardID == rhs.cardID
