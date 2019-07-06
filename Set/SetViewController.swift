@@ -145,7 +145,7 @@ class SetViewController: UIViewController {
     }
     
     @IBAction func touchCard(_ sender: UIButton) {
-        if let buttonIndex = cardButtons.index(of: sender), let card = buttonsOfCards[buttonIndex] {
+        if let buttonIndex = cardButtons.firstIndex(of: sender), let card = buttonsOfCards[buttonIndex] {
             set.chooseCard(card)
             updateView()
         }

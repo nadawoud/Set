@@ -78,7 +78,7 @@ class SetGame {
             selectedCards += [card]
         }
         else {
-            if let selectedCardID = selectedCards.index(of: card), selectedCards.count < 3 {
+            if let selectedCardID = selectedCards.firstIndex(of: card), selectedCards.count < 3 {
                 selectedCards.remove(at: selectedCardID)
             }
         }
